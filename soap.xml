@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+
+<soap:Body> 
+    <RequestShipment xmlns="https://wscsro.e-nekosolution.net/"> 
+        <id>BK001</id> <!-- 荷主 ID -->
+        <pw>99999</pw> <!-- 荷主 ID に設定されたパスワード -->
+        <DataCount>1</DataCount> <!-- 出荷引取依頼情報の件数 -->
+        <Shipment_List> 
+            <Shipment_Data> 
+                <DataType>0</DataType> <!-- データ識別 0=産直依頼、1=引取・当日引取依頼、3=Web 出荷コントロールサービス -->
+                <UnsoIraiNo>20101222020002001</UnsoIraiNo> <!-- 01.運送依頼番号、お客様で管理されている任意の番号（受注番号など）※UnsoOkuriNo が Web 出荷側自動採番の場合、必ずユニークにすること -->
+                <UnsoOkuriNo></UnsoOkuriNo> <!-- 02.運送送状番号、ヤマト運輸の伝票番号（Web 出荷側自動採番の場合、必要なし） -->
+                <SinCode>BK001</SinCode> <!-- 03.真荷主コード 真荷主を識別するコード -->
+                <SinJyuTenCode></SinJyuTenCode> <!-- 04.真荷主受注店コード、真荷主側で決めた受注店（受注場所）のコード -->
+                <SinJyuTenName>Ａ店舗</SinJyuTenName> <!-- 05.真荷主受注店名、真荷主側で決めた受注店（受注場所）の名称 -->
+                <SinJyutyuDate>20101220</SinJyutyuDate> <!-- 06.真荷主受注日、真荷主側の受注日 （YYYYMMDD 形式） -->
+                <SinRenrakuTel></SinRenrakuTel> <!-- 07.真荷主連絡先電話番号、真荷主受注店の連絡先電話番号 -->
+                <LogoType></LogoType> <!-- 08.ロゴ種別、送り状に印刷するロゴの種別 -->
+                <SinDataCreateDate>20101220</SinDataCreateDate> <!-- 09.真荷主データ作成日、真荷主がデータを作成した日 （YYYYMMDD 形式） -->
+                <SinDataCreateTime>2105</SinDataCreateTime> <!-- 10.真荷主データ作成時間、真荷主がデータを作成した時間 （HHMM 形式） -->
+                <HatsuCode>0001</HatsuCode> <!-- 11.発荷主コード、真荷主が決めたコード -->
+                <TodokeSakiCode>K0001</TodokeSakiCode> <!-- 12.荷届先コード、真荷主が決めた届け先のコード -->
+                <TodokeSakiPost>2400104</TodokeSakiPost> <!-- 13.荷届先郵便番号、届け先の郵便番号 -->
+                <TodokeSakiTel>0410-0001-0001</TodokeSakiTel> <!-- 14.荷届先電話番号、届け先の電話番号  （未入力エラーにはならないが、ヤマト運輸の運用上必須） -->
+                <TodokeSakiAddress1>神奈川県横須賀市芦名９－９９９</TodokeSakiAddress1> <!-- address 1 -->
+                <TodokeSakiAddress2>マンション芦名９９９</TodokeSakiAddress2> <!-- address 2 -->
+                <TodokeSakiName>神奈川 太郎</TodokeSakiName> <!-- 17.荷届先名、届け先のお名前 -->
+                <NiOkurininCode>N0001</NiOkurininCode> <!-- 18.荷送人コード、真荷主が決めた依頼主のコード -->
+                <NiOkurininPost>4580913</NiOkurininPost> <!-- 19.荷送人郵便番号、依頼主の郵便番号 -->
+                <NiOkurininTel>0520-0001-0002</NiOkurininTel> <!-- Tel -->
+                <NiOkurininAddress1>愛知県名古屋市緑区桶狭間北１－９９９</NiOkurininAddress1> <!-- address 1 -->
+                <NiOkurininAddress2>第一ビル９０１号</NiOkurininAddress2> <!-- address 2 -->
+                <NiOkurininName>名古屋 次郎</NiOkurininName> <!-- 23.荷送人名、依頼主のお名前 -->
+                <SyukaKiboDate>20101222</SyukaKiboDate> <!-- 24.集荷希望日、荷物の集荷を希望する日 -->
+                <SyukaKiboTime>PM</SyukaKiboTime> <!-- 集荷希望時間帯 -->
+                <TyakaSiteiDate>20101224</TyakaSiteiDate> <!-- 26.着荷指定日、荷物の配達を希望する日 -->
+                <TyakaSiteiTime>16</TyakaSiteiTime> <!-- 27.着荷指定時間帯、荷物の配達を希望する時間帯 ※各種コード表７参照 -->
+                <SizeCode>0104</SizeCode> <!-- 28.寸法単位コード、荷物のサイズをあらわすコード ※各種コード表３参照 -->
+                <ToriatukaiCode1>2</ToriatukaiCode1> <!-- 29.荷物取扱条件１、荷物を配送する時の注意事項 ※各種コード表１参照 -->
+                <ToriatukaiCode2>5</ToriatukaiCode2> <!-- 30.荷物取扱条件２、荷物を配送する時の注意事項 ※各種コード表１参照 -->
+                <FutaiSagyo>付帯作業１</FutaiSagyo> <!-- 31.配達付帯作業、注意事項の補足 -->
+                <NimotuKosu>001</NimotuKosu> <!-- 32.個数、荷物の個数 ※１個（’001’）で固定 -->
+                <OndoKbn>1</OndoKbn> <!-- 33.保管温度区分、ｸｰﾙ宅急便使用時の冷凍・冷蔵の区分 ※各種コード表２参照 -->
+                <SinaDaikin>0</SinaDaikin> <!-- 34.品代金、コレクト宅急便使用時の集金金額 -->
+                <SyukaKbn>0</SyukaKbn> <!-- 35.出荷区分、通常出荷で（’0’）固定 ※各種コード表４参照 -->
+                <UnsoJigyosyaCode></UnsoJigyosyaCode> <!-- 36.運送事業者コード、荷物を配送する事業者のコード ※各種コード表５参照 -->
+                <HyokiHinmei1>産直商品１</HyokiHinmei1> <!-- 37.送り状標記品名１、送り状に出力する品名 -->
+                <HyokiHinmei2>産直商品２</HyokiHinmei2> <!-- 38.送り状標記品名２、送り状に出力する品名 -->
+                <HyokiHInCode>SHO0001</HyokiHInCode> <!-- 39.運送品標記用品コード、真荷主側で決めた品名コード -->
+                <SyohinMei>産直商品</SyohinMei> <!--  -->
+                <Suryo>01</Suryo> <!--  41.数量 同一商品個数 ※ServiceKbn=’W’以外は（’01’）固定 -->
+                <Tanka>200</Tanka> <!-- 42.商品単価 -->
+                <HousouKbn>01</HousouKbn> <!-- 43.包装区分、商品の包装の種類 ※各種コード表８参照 -->
+                <Nosikbn>01</Nosikbn> <!--  44.のし区分、のしの種類 ※各種コード表９参照 -->
+                <Nosimei>のし無地</Nosimei> <!-- 45.のし名称、のしに記述する名前 -->
+                <Bikou>備考注意事項１</Bikou> <!-- 46.備考、出荷時に注意すべき作業指示事項 -->
+                <TodokeSakieMail>t000001@test.mail</TodokeSakieMail> <!-- 47.届け先 e-Mail アドレス、届け先に到着予定メールを送信する際に使用 -->
+                <NiOkurinineMail>i000001@test.mail</NiOkurinineMail> <!-- 48.依頼主 e-Mail アドレス、依頼主に配達完了メールを送信する際に使用 -->
+                <ServiceKbn>0</ServiceKbn> <!-- 49.サービス区分、サービスの種類を表すコード ※各種コード表１０参照 -->
+                <SizaihinmeiCode></SizaihinmeiCode> <!-- 50.資材品名コード、資材の商品名を表すコード ※各種コード表１５参照 -->
+                <SizaiKosu></SizaiKosu> <!-- 51.資材個数、資材の個数 ※資材品名コード指定の場合、（’01’）固定 -->
+                <NoshiSyubetu>1</NoshiSyubetu><!--  -->
+                <NoshiInjiMei>印字タイトル</NoshiInjiMei> <!-- 53.のし印字名、のし印刷時の表書き名称 -->
+                <NaireInji1>産直１</NaireInji1> <!-- 54.名入れ印字名１、のし印字時の名入れ名称１  -->
+                <NaireInji2>産直２</NaireInji2> <!-- 55.名入れ印字名２、のし印字時の名入れ名称２ -->
+                <NaireInji3>産直３</NaireInji3> <!-- 56.名入れ印字名3、のし印字時の名入れ名称3 -->
+                <NiOkurinineMailkbn>1</NiOkurinineMailkbn> <!-- 57.依頼主メール機種種別、メール受信する機種種別 ※各種コード表１２参照 -->
+                <TodokeSakieMailkbn>2</TodokeSakieMailkbn> <!-- 58.届け先メール機種種別、メール受信する機種種別 ※各種コード表１２参照 -->
+                <TsuikaBiko>追加備考１</TsuikaBiko> <!-- 59.追加備考 -->
+                <Yobi></Yobi> <!-- 予備 -->
+            </Shipment_Data>         
+        </Shipment_List> 
+    </RequestShipment> 
+</soap:Body> 
+</soap:Envelope>

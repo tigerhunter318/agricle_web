@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+    <title>Create custom alert with sweetAlert jQuery plugin</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="sweetalert.css" type="text/css" rel="stylesheet">
+    <link href="facebook.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="sweetalert.min.js" type="text/javascript"></script>
+    <script type='text/javascript'>
+    $( document ).ready(function() {
+
+        // Message
+        $("#but1").click(function(){
+            var message = $("#message").val();
+            if(message == ""){
+            message  = "Your message";
+            }
+            swal(message);
+        });
+
+        // With message and title
+        $("#but2").click(function(){
+            var message = $("#message").val();
+            var title = $("#title").val();
+            if(message == ""){
+            message  = "Your message";
+            }
+            if(title == ""){
+            title = "Your message";
+            }
+            swal(title,message);
+        });
+
+       // Timer
+        $("#but3").click(function(){
+            var message = $("#message").val();
+            var title = $("#title").val();
+            if(message == ""){
+                message  = "Your message";
+            }
+            if(title == ""){
+                title = "Your message";
+            }
+            message += "(close after 2 seconds)";
+            swal({
+                title: title,
+                text: message,
+                timer: 2000,
+                showConfirmButton: false
+            });
+        });
+    
+        // type
+        $("#but4").click(function(){
+            var message = $("#message").val();
+            var title = $("#title").val();
+            if(message == ""){
+                message  = "Your message";
+            }
+            if(title == ""){
+                title = "Your message";
+            }
+
+            var type = $("#type").val();
+            swal({
+                title: title,
+                text: message,
+                type: type
+            });
+        });
+
+    });
+</script>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Title</td>
+        <td><input type='text' value='Title text' id='title'></td>
+        </tr>
+        <tr>
+        <td>Message</td>
+        <td><input type='text' value='Your message' id='message'></td>
+    </tr>
+
+    <tr>
+        <td>Type</td>
+        <td><select id="type">
+        <option value='success' selected>success</option>
+        <option value='warning' selected>warning</option>
+        <option value='error' selected>error</option>
+        <option value='info' selected>info</option>
+        </select></td>
+    </tr>
+
+    <tr>
+        <td colspan='2'><input type='button' value='Simple alert' id='but1'>&nbsp;
+        <input type='button' value='Alert with title' id='but2'>&nbsp;
+        <input type='button' value='With timer' id='but3'>&nbsp;
+        <input type='button' value='Message box with Type' id='but4'>
+        </td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+        <td></td>
+    </tr>
+</table>
+
+</body>
+</html>

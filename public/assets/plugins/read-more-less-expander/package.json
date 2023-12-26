@@ -1,0 +1,42 @@
+{
+  "name": "jquery-expander",
+  "title": "jQuery Expander Plugin",
+  "description": "Expand and collapse HTML content",
+  "version": "2.0.2",
+  "main": "jquery.expander.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kswedberg/jquery-expander.git"
+  },
+  "dependencies": {
+    "jquery": ">=1.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-config-kswedberg": "^4.1.1",
+    "grunt": "^1.4.1",
+    "grunt-contrib-concat": "^2.0.0",
+    "grunt-contrib-qunit": "^5.1.1",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-eslint": "^24.0.0",
+    "grunt-shell": "^3.0.1",
+    "grunt-version": "^3.0.0"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "text",
+    "truncate",
+    "summary",
+    "details",
+    "expand",
+    "collapse"
+  ],
+  "homepage": "https://kswedberg.github.io/jquery-expander/",
+  "author": {
+    "name": "Karl Swedberg",
+    "email": "kswedberg@gmail.com",
+    "url": "http://www.learningjquery.com/"
+  },
+  "license": "MIT"
+}
